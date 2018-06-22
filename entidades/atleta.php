@@ -1,7 +1,7 @@
 <?php
 // clase para registrar un jugador
-require_once "../util/conexiondb.php";
-require_once "../entidades/persona.php";
+require_once "./util/conexiondb.php";
+require_once "./entidades/persona.php";
 
 class Atleta extends Persona{
 	private $f_nacimiento;
@@ -28,9 +28,9 @@ class Atleta extends Persona{
 		if ($valido) {
 			$conexion = new ConectarDB();
 			// sql para agregar jugador
-			$sql = "INSERT INTO atletas (id, nombres, apellidos, f_nacimiento, telefono, direccion, 
-			representante) VALUES ('{$datos["cedula"]}', '{$datos["nombres"]}', '{$datos["apellidos"]}', 
-			'{$datos["f_nacimiento"]}', '{$datos["telefono"]}', '{$datos["direccion"]}', 
+			$sql = "INSERT INTO atletas (id, nombres, apellidos, f_nacimiento, telefono, direccion,
+			representante) VALUES ('{$datos["cedula"]}', '{$datos["nombres"]}', '{$datos["apellidos"]}',
+			'{$datos["f_nacimiento"]}', '{$datos["telefono"]}', '{$datos["direccion"]}',
 			'{$datos["representante"]}')";
 
 			if ($conexion->db->query($sql) === TRUE) {
