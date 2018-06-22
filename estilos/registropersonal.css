@@ -1,0 +1,19 @@
+
+body{
+
+	background-image: url("../imagenes/personal.jpg");
+background-size: cover;
+}
+
+ #registro{
+ position: relative;
+  margin: auto;
+  margin-bottom: 10px;
+  padding:10px 10px 10px;
+  width: 700px;
+  background: white;
+  border-radius: 15px;
+ }
+
+
+
